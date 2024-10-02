@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Board from "./Components/Kanban_Board/Board";
+import Navbar from "./Components/Navbar/Navbar";
+
+// I need a little bit more time to complete this project ,, 
 
 function App() {
+  const [groupBy, setGroupBy] = useState('status'); 
+  const [tickets, setTickets] = useState([]); 
+  const [users, setUsers] = useState([]); 
+
+  useEffect(() => {
+    const savedGroupBy = localStorage.getItem('groupBy');
+    if (savedGroupBy) {
+      setGroupBy(savedGroupBy);
+    }
+    Promise.all([
+      fetch('https://api.quicksell.co/v1/internal/frontend-assignment')
+        .then(response => response.json())
+    ])
+    .then(([data]) => {
+      if (Array.isArray(data.tickets)) {
+        setTickets(data.tickets);
+      } else {
+        console.error("Expected tickets to be an array");
+      }
+
+      if (Array.isArray(data.users)) {
+        setUsers(data.users); 
+      } else {
+        console.error("Expected users to be an array");
+      }
+    })
+    .catch(error => console.log("Error fetching data: ", error));
+  }, []); 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar groupBy={groupBy} setGroupBy={setGroupBy} />
+      <Board groupBy={groupBy} tickets={tickets} users={users} />  
+    </>
   );
 }
 

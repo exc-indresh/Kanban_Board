@@ -1,0 +1,61 @@
+/* Navbar Styling  */
+.nav-display{
+    margin: 1rem 2rem;
+
+}
+.nav-display-btn{
+    display: inline-flex;
+    border: 1px solid #bebdbd;
+    border-radius: 5px;
+    padding: 6px 13px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nav-display-btn:hover{
+    cursor: pointer;
+}
+.nav-adjust-icon{
+    margin: 3px 4px;
+}
+.nav-chevron-down-icon{
+    margin: 2px 3px;
+}
+
+.toggle-nav-display-filter-hide{
+    display: none;
+}
+
+.nav-display-filter{
+    margin: 0rem 2rem;
+    display: inline-block;
+    padding: 6px 13px;
+    border: 1px solid #bebdbd;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #efeaea;
+    position: absolute;
+}
+.nav-display-filter-group{
+    display: flex;
+}
+.nav-display-filter-order{
+    display: flex;
+}
+.nav-display-filter-group-options{
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+.nav-display-filter-order-options{
+    padding-left: 17px;
+    padding-bottom: 10px;
+}
+.nav-display-filter select{
+    padding: 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #bebdbd;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

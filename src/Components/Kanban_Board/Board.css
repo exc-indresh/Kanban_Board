@@ -1,0 +1,119 @@
+.board-container {
+    background-color: #efeaea;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+}
+
+.board-container-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+}
+.heading-board-filter-header{
+    display: flex;
+}
+.heading-board-filter-header img{
+    padding: 0 8px;
+}
+
+.board-column {
+    flex: 1 1 18%; 
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.board-ticket-body {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #bebdbd;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 3px 2px #3f706361;
+    width: 74%; 
+}
+
+.board-filter-header-list {
+    display: flex;
+    margin: 4px 0px;
+}
+
+.board-filter-header {
+    padding: 20px 10px;
+}
+
+.board-ticket-id-user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-ticket-id-user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: #b06e0c;
+    color: #fff;
+}
+
+.board-ticket-id {
+    font-size: 17px;
+    font-weight: 500;
+    color: #898686;
+}
+
+.board-ticket-title-and-status {
+    display: flex;
+}
+
+.board-ticket-title-and-status img {
+    padding: 13px 0;
+}
+
+.board-ticket-title {
+    font-size: 14px;
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 10px 5px;
+}
+
+.board-feature-request-priority-body {
+    display: flex;
+}
+
+.feature-request-priority-body {
+    margin: 0 6px;
+    border: 1px solid #bebdbd;
+    border-radius: 5px;
+    padding: 0px 7px;
+}
+
+.board-ticket-tag:before {
+    background: gray;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    margin-right: .2rem;
+    width: 10px;
+}
+
+.board-ticket-tag {
+    font-size: 13px;
+    font-weight: 500;
+    color: #898686;
+}
+
+@media screen and (max-width: 800px) {
+    .board-ticket-body {
+        width: 100%;
+    }
+}
